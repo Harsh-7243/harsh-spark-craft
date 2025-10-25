@@ -1,76 +1,162 @@
 # 🚀 Harsh's Portfolio
 
-**A modern and responsive personal portfolio website built with React and TypeScript.**  
-This project showcases my skills, projects, and professional journey through a visually engaging and interactive user interface.
+A modern, responsive portfolio website built with React, Vite, and TailwindCSS, featuring interactive 3D elements, dark/light theme support, and seamless animations.
 
 🌐 **Live Demo:** [meharsh.vercel.app](https://meharsh.vercel.app)
 
----
+![Portfolio Preview](public/images/preview.png)
 
 ## ✨ Key Features
 
-- 📱 **Fully Responsive** — Seamless viewing experience across all devices (desktop, tablet, mobile).
-- 🎯 **Interactive UI** — Smooth scrolling, engaging animations, and intuitive navigation.
-- 📂 **Project Showcase** — Displays featured projects with links to live demos and source code.
-- 📬 **Integrated Contact Form** — Built-in contact form with validation for easy communication.
-- ⚡ **Performance Optimized** — Fast load times and smooth performance for a great UX.
-
----
+- 🎮 **Interactive 3D Elements** — Custom-built 3D models and animations using Three.js
+- 🌓 **Dark/Light Theme** — System-aware theme with manual toggle option
+- 📱 **Fully Responsive** — Seamless experience across all devices
+- ⚡ **Modern Stack** — Built with React, Vite, and TailwindCSS
+- 🎯 **Smooth Animations** — Engaging animations using Framer Motion
+- 📬 **Smart Contact Form** — Interactive form with EmailJS integration
+- 🎨 **Modern UI** — Sleek components built with shadcn/ui
+- 🚀 **Performance Optimized** — Lazy loading and code splitting
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** React, TypeScript, JavaScript  
-- **Styling:** CSS3, HTML5  
-- **Deployment:** Vercel  
-- **Version Control:** Git, GitHub  
+- **Core:** React 18, Vite, TailwindCSS
+- **3D Graphics:** Three.js / React Three Fiber
+- **Animations:** Framer Motion
+- **UI Components:** shadcn/ui
+- **Form Handling:** EmailJS
+- **Icons:** Lucide Icons
+- **State Management:** React Hooks
+- **Development:** TypeScript
+- **Deployment:** Vercel
+- **Version Control:** Git
 
----
+## 📚 Project Structure
+
+```
+harshportfolio/
+├── src/
+│   ├── components/
+│   │   ├── sections/       # Main page sections
+│   │   │   ├── Hero.jsx   # 3D hero section
+│   │   │   ├── About.jsx  # About section
+│   │   │   └── ...
+│   │   ├── layout/        # Layout components
+│   │   └── ui/            # Reusable UI components
+│   ├── hooks/             # Custom React hooks
+│   ├── lib/               # Utility functions
+│   └── pages/             # Page components
+├── public/                # Static assets
+└── ...config files
+```
 
 ## ⚙️ Getting Started
 
-To run this project locally:
+### Prerequisites
 
-### ✅ Prerequisites
+- Node.js (v16 or higher)
+- npm (v7 or higher)
 
-- Node.js (v16 or higher recommended)
-- npm or yarn package manager
+### Installation Steps
 
-### 📥 Installation
-
+1. **Clone the repository:**
 ```bash
-# Clone the repository
 git clone https://github.com/Harsh-7243/harshportfolio.git
-
-# Navigate to the project directory
 cd harshportfolio
+```
 
-# Install dependencies
+2. **Install dependencies:**
+```bash
 npm install
+```
 
-# Start the development server
+3. **Set up environment variables:**
+Create a `.env` file in the root directory:
+```env
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+4. **Start development server:**
+```bash
 npm run dev
 ```
 
-The project should now be running at `http://localhost:5173` (or the URL shown in your terminal).
+5. **Build for production:**
+```bash
+npm run build
+```
 
----
+## 🎨 Customization
 
-## 🗺️ Future Roadmap
+### Theme Configuration
 
-Planned features for future updates:
+Customize the theme in `src/index.css`:
+```css
+:root {
+  --background: 0 0% 100%;
+  --foreground: 220 80% 10%;
+  /* More variables... */
+}
 
-- [ ] Add multilingual support (i18n)
-- [ ] Integrate a blog or articles section
-- [ ] Implement a dark/light theme switcher
-- [ ] Connect a backend service for contact form submissions (e.g., EmailJS, Formspree)
+.dark {
+  --background: 195 22% 6%;
+  --foreground: 205 18% 95%;
+  /* Dark mode variables... */
+}
+```
 
----
+### Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+- `npm run format` - Format code with Prettier
+
+## 🔄 State Management
+
+- Theme state managed with localStorage
+- Form states handled with React hooks
+- Animations controlled by Framer Motion
+- 3D models managed by React Three Fiber
+
+## 📱 Responsive Design
+
+- Mobile-first approach
+- Adaptive 3D elements
+- Responsive typography
+- Touch-friendly interactions
+
+## 🎯 Future Roadmap
+
+- [ ] Add blog/articles section
+- [ ] Implement i18n for multiple languages
+- [ ] Add more interactive 3D elements
+- [ ] Integrate a CMS for content management
+- [x] Implement dark/light theme
+- [x] Add contact form functionality
 
 ## 👨‍💻 Let's Connect!
 
-Feel free to connect or check out more of my work:
+Feel free to reach out and connect:
 
 | Platform | Link |
 |----------|------|
 | 🌐 Portfolio | [meharsh.vercel.app](https://meharsh.vercel.app) |
+| 💼 LinkedIn | [@harsh-kumar](https://linkedin.com/in/harsh-kumar-9a10152b7) |
 | 🐙 GitHub | [@Harsh-7243](https://github.com/Harsh-7243) |
+| 📧 Email | srivastavaharsh1108@gmail.com |
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+### 🙏 Acknowledgments
+
+- shadcn/ui for the beautiful components
+- Three.js community for 3D resources
+- Framer Motion for smooth animations
+- And all open-source contributors!
