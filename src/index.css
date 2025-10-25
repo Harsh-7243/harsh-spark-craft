@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles to prevent horizontal scrolling */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Ensure no content overflows the viewport */
+    --max-w-container: 100vw;
+    --padding-container: 1rem;
+    
+    @media (min-width: 640px) {
+      --padding-container: 1.5rem;
+    }
+    
+    @media (min-width: 1024px) {
+      --max-w-container: 1200px;
+    }
+    --background: 0 0% 100%;
+    --foreground: 220 80% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 80% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 80% 10%;
+
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 270 70% 65%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 270 70% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 210 100% 50%;
+
+    --radius: 0.75rem;
+    
+    /* Ensure all containers respect the max width */
+    .container {
+      width: 100%;
+      max-width: var(--max-w-container);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: var(--padding-container);
+      padding-right: var(--padding-container);
+    }
+    
+    /* Prevent horizontal overflow in text containers */
+    p, h1, h2, h3, h4, h5, h6, span, a, li {
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    /* Custom portfolio colors */
+    --navy: 220 80% 15%;
+    --electric-blue: 210 100% 50%;
+    --soft-violet: 270 70% 65%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220, 80%, 15%) 0%, hsl(210, 100%, 50%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(210, 100%, 50%) 0%, hsl(270, 70%, 65%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220, 80%, 15%) 0%, hsl(210, 100%, 35%) 50%, hsl(270, 70%, 50%) 100%);
+  }
+
+  .dark {
+    /* New midnight-teal dark theme */
+    --background: 195 22% 6%; /* deep midnight teal */
+    --foreground: 205 18% 95%; /* soft off-white for text */
+
+    --card: 195 18% 10%;
+    --card-foreground: 205 18% 95%;
+
+    --popover: 195 18% 10%;
+    --popover-foreground: 205 18% 95%;
+
+    --primary: 180 70% 52%; /* teal */
+    --primary-foreground: 205 18% 98%;
+
+    --secondary: 265 60% 60%; /* soft violet */
+    --secondary-foreground: 205 18% 98%;
+
+    --muted: 200 10% 14%;
+    --muted-foreground: 205 10% 70%;
+
+    --accent: 30 95% 60%; /* warm amber accent */
+    --accent-foreground: 205 18% 98%;
+
+    --destructive: 0 67% 45%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 200 12% 16%;
+    --input: 200 12% 16%;
+    --ring: 180 70% 52%;
+
+    /* Dark mode custom colors */
+    --navy: 200 18% 8%;
+    --electric-blue: 180 70% 55%;
+    --soft-violet: 265 60% 62%;
+    
+    /* Dark gradients - richer, cooler with warm accent */
+    --gradient-primary: linear-gradient(135deg, hsl(195, 22%, 6%) 0%, hsl(180, 70%, 45%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(180, 70%, 45%) 0%, hsl(265, 60%, 60%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(195, 22%, 6%) 0%, hsl(180, 70%, 38%) 50%, hsl(30, 95%, 60%) 100%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-poppins;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Signature theme adaptation */
+  .dark {
+    --theme-filter: brightness(1.2) contrast(1.1);
+  }
+  
+  :root {
+    --theme-filter: brightness(0.9) contrast(1.1);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent;
+  }
+
+  .glassmorphism {
+    @apply backdrop-blur-lg bg-white/10 border border-white/20;
+  }
+
+  .dark .glassmorphism {
+    @apply backdrop-blur-lg bg-black/20 border border-white/10;
+  }
+
+  .font-signature {
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 0 0 1px rgba(var(--primary), 0.1);
+    letter-spacing: 0.5px;
+  }
+}

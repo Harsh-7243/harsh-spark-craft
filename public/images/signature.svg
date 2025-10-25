@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="80" viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="signatureGradient" x1="0" y1="0" x2="200" y2="80">
+      <stop offset="0%" class="gradient-start" />
+      <stop offset="50%" class="gradient-middle" />
+      <stop offset="100%" class="gradient-end" />
+    </linearGradient>
+  </defs>
+  <style>
+    .signature-path {
+      fill: none;
+      stroke: url(#signatureGradient);
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    @media (prefers-color-scheme: dark) {
+      .gradient-start { stop-color: hsl(var(--primary)); }
+      .gradient-middle { stop-color: hsl(var(--purple-500)); }
+      .gradient-end { stop-color: hsl(var(--secondary)); }
+    }
+    @media (prefers-color-scheme: light) {
+      .gradient-start { stop-color: hsl(var(--primary)); }
+      .gradient-middle { stop-color: hsl(var(--purple-500)); }
+      .gradient-end { stop-color: hsl(var(--secondary)); }
+    }
+  </style>
+  <path d="M40 40 C60 20, 80 20, 100 40 S140 60, 160 40" class="signature-path"/>
+</svg>
