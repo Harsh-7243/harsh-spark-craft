@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { Github, Instagram, Linkedin, Mail, Twitter } from "lucide-react";
 
 // Lazy load components
-const ModernSetup3D = lazy(() => import('./ModernSetup3D'));
-const MobileDevice3D = lazy(() => import('./MobileDevice3D'));
+const ModernSetup3D = lazy(() => import('./ModernSetup3D.jsx'));
+const MobileDevice3D = lazy(() => import('./MobileDevice3D.jsx'));
 
 // Loading component for the 3D model
 const ComputerLoader = () => (
@@ -48,8 +48,8 @@ const Hero = ({ isDark }) => {
     default: isDark ? "#D4D4D4" : "#2D3748",
   };
   return (
-    <section className="min-h-screen flex items-start sm:items-center py-4 sm:py-8 px-4 sm:px-6 lg:px-8 mt-8 sm:mt-8">
-      <div className="max-w-7xl mx-auto w-full -mt-12">
+    <section className="min-h-screen flex items-start sm:items-center pt-16 sm:pt-20 pb-6 sm:pb-8 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
           {/* Left Column - Content */}
           <motion.div
