@@ -4,7 +4,7 @@ A modern, responsive portfolio website built with React, Vite, and TailwindCSS, 
 
 🌐 **Live Demo:** [meharsh.vercel.app](https://meharsh.vercel.app)
 
-![Portfolio Preview](public/images/preview.png)
+
 
 ## ✨ Key Features
 
