@@ -1,162 +1,113 @@
-# 🚀 Harsh's Portfolio
+<div align="center">
 
-A modern, responsive portfolio website built with React, Vite, and TailwindCSS, featuring interactive 3D elements, dark/light theme support, and seamless animations.
+# 🚀 Harsh Kumar's Portfolio
 
-🌐 **Live Demo:** [meharsh.vercel.app](https://meharsh.vercel.app)
+[![Live Demo](https://img.shields.io/badge/demo-live-success?style=for-the-badge&logo=vercel)](https://meharsh.vercel.app)
+[![React](https://img.shields.io/badge/React-18.3-blue?style=for-the-badge&logo=react)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?style=for-the-badge&logo=vite)](https://vitejs.dev/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind-3.4-06B6D4?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com/)
 
+**Modern portfolio with interactive 3D elements, smooth animations, and responsive design.**
 
+[View Demo](https://meharsh.vercel.app) · [Report Bug](https://github.com/Harsh-7243/harshportfolio/issues)
 
-## ✨ Key Features
+</div>
 
-- 🎮 **Interactive 3D Elements** — Custom-built 3D models and animations using Three.js
-- 🌓 **Dark/Light Theme** — System-aware theme with manual toggle option
-- 📱 **Fully Responsive** — Seamless experience across all devices
-- ⚡ **Modern Stack** — Built with React, Vite, and TailwindCSS
-- 🎯 **Smooth Animations** — Engaging animations using Framer Motion
-- 📬 **Smart Contact Form** — Interactive form with EmailJS integration
-- 🎨 **Modern UI** — Sleek components built with shadcn/ui
-- 🚀 **Performance Optimized** — Lazy loading and code splitting
+## ✨ Features
+
+- 🎮 **Interactive 3D Graphics** — Custom 3D models with Three.js
+- 🌓 **Dark/Light Theme** — System-aware theme with manual toggle
+- 📱 **Fully Responsive** — Mobile-first design across all devices
+- ⚡ **Performance Optimized** — Lazy loading and code splitting
+- 🎯 **Smooth Animations** — Framer Motion micro-interactions
+- 📬 **Contact Form** — EmailJS integration
+- 🎨 **Modern UI** — Built with shadcn/ui and Radix UI
 
 ## 🛠️ Tech Stack
 
-- **Core:** React 18, Vite, TailwindCSS
-- **3D Graphics:** Three.js / React Three Fiber
-- **Animations:** Framer Motion
-- **UI Components:** shadcn/ui
-- **Form Handling:** EmailJS
-- **Icons:** Lucide Icons
-- **State Management:** React Hooks
-- **Development:** TypeScript
-- **Deployment:** Vercel
-- **Version Control:** Git
+**Core:** React 18 · Vite · TailwindCSS · TypeScript  
+**3D Graphics:** Three.js · React Three Fiber  
+**UI & Animations:** shadcn/ui · Framer Motion  
+**Forms:** React Hook Form · Zod · EmailJS  
+**Deployment:** Vercel
 
-## 📚 Project Structure
+## 📁 Project Structure
 
 ```
-harshportfolio/
-├── src/
-│   ├── components/
-│   │   ├── sections/       # Main page sections
-│   │   │   ├── Hero.jsx   # 3D hero section
-│   │   │   ├── About.jsx  # About section
-│   │   │   └── ...
-│   │   ├── layout/        # Layout components
-│   │   └── ui/            # Reusable UI components
-│   ├── hooks/             # Custom React hooks
-│   ├── lib/               # Utility functions
-│   └── pages/             # Page components
-├── public/                # Static assets
-└── ...config files
+src/
+├── components/
+│   ├── sections/       # Hero, About, Projects, Contact, etc.
+│   ├── layout/         # Navbar with theme toggle
+│   └── ui/             # shadcn/ui components
+├── hooks/              # Custom React hooks
+├── lib/                # Utility functions
+└── pages/              # Main page component
 ```
 
-## ⚙️ Getting Started
+## 🚀 Quick Start
 
-### Prerequisites
-
-- Node.js (v16 or higher)
-- npm (v7 or higher)
-
-### Installation Steps
-
-1. **Clone the repository:**
 ```bash
+# Clone repository
 git clone https://github.com/Harsh-7243/harshportfolio.git
 cd harshportfolio
-```
 
-2. **Install dependencies:**
-```bash
+# Install dependencies
 npm install
-```
 
-3. **Set up environment variables:**
-Create a `.env` file in the root directory:
-```env
+# Set up environment variables (.env)
 VITE_EMAILJS_SERVICE_ID=your_service_id
 VITE_EMAILJS_TEMPLATE_ID=your_template_id
 VITE_EMAILJS_PUBLIC_KEY=your_public_key
-```
 
-4. **Start development server:**
-```bash
+# Start development server
 npm run dev
-```
 
-5. **Build for production:**
-```bash
+# Build for production
 npm run build
 ```
 
+**Get EmailJS credentials:** Sign up at [EmailJS.com](https://www.emailjs.com/)
+
 ## 🎨 Customization
 
-### Theme Configuration
+**Theme Colors:** Edit `src/index.css`  
+**Personal Info:** Update `Contact.jsx`, `Hero.jsx`, `About.jsx`  
+**Projects:** Modify `Projects.jsx`
 
-Customize the theme in `src/index.css`:
-```css
-:root {
-  --background: 0 0% 100%;
-  --foreground: 220 80% 10%;
-  /* More variables... */
-}
+### Scripts
 
-.dark {
-  --background: 195 22% 6%;
-  --foreground: 205 18% 95%;
-  /* Dark mode variables... */
-}
+```bash
+npm run dev      # Development server
+npm run build    # Production build
+npm run preview  # Preview build
+npm run lint     # Run linter
 ```
 
-### Available Scripts
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
-- `npm run format` - Format code with Prettier
 
-## 🔄 State Management
 
-- Theme state managed with localStorage
-- Form states handled with React hooks
-- Animations controlled by Framer Motion
-- 3D models managed by React Three Fiber
 
-## 📱 Responsive Design
 
-- Mobile-first approach
-- Adaptive 3D elements
-- Responsive typography
-- Touch-friendly interactions
 
-## 🎯 Future Roadmap
+## 🤝 Contributing
 
-- [ ] Add blog/articles section
-- [ ] Implement i18n for multiple languages
-- [ ] Add more interactive 3D elements
-- [ ] Integrate a CMS for content management
-- [x] Implement dark/light theme
-- [x] Add contact form functionality
+Contributions welcome! Fork the repo, create a feature branch, and submit a PR.
 
-## 👨‍💻 Let's Connect!
+## 📬 Contact
 
-Feel free to reach out and connect:
-
-| Platform | Link |
-|----------|------|
-| 🌐 Portfolio | [meharsh.vercel.app](https://meharsh.vercel.app) |
-| 💼 LinkedIn | [@harsh-kumar](https://linkedin.com/in/harsh-kumar-9a10152b7) |
-| 🐙 GitHub | [@Harsh-7243](https://github.com/Harsh-7243) |
-| 📧 Email | srivastavaharsh1108@gmail.com |
+[![Portfolio](https://img.shields.io/badge/Portfolio-meharsh.vercel.app-blue?style=for-the-badge&logo=vercel)](https://meharsh.vercel.app)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Harsh_Kumar-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/harsh-kumar-9a10152b7)
+[![GitHub](https://img.shields.io/badge/GitHub-Harsh--7243-181717?style=for-the-badge&logo=github)](https://github.com/Harsh-7243)
+[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail)](mailto:srivastavaharsh1108@gmail.com)
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT License - see [LICENSE](LICENSE) for details.
+
+## 🙏 Credits
+
+Built with [shadcn/ui](https://ui.shadcn.com/), [Three.js](https://threejs.org/), [Framer Motion](https://www.framer.com/motion/), and [Vercel](https://vercel.com/).
 
 ---
 
-### 🙏 Acknowledgments
-
-- shadcn/ui for the beautiful components
-- Three.js community for 3D resources
-- Framer Motion for smooth animations
-- And all open-source contributors!
+<div align="center">Made with ❤️ by <a href="https://github.com/Harsh-7243">Harsh Kumar</a></div>
